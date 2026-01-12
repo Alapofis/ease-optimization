@@ -4,16 +4,31 @@ from .gram import compute_gram
 
 
 class EASE:
-    def __init__(self, solver, reg: float):
+    def __init__(
+        self,
+        solver,
+        reg: float,
+        normalization: str = "none",
+        alpha: float = 0.5,
+        beta: float = 1.0,
+    ):
         self.solver = solver
         self.reg = float(reg)
+        self.normalization = normalization
+        self.alpha = alpha
+        self.beta = beta
         self.B = None
 
     def fit(self, X: sp.csr_matrix):
         if not sp.isspmatrix_csr(X):
             raise TypeError("X must be CSR matrix")
 
-        G = compute_gram(X)
+        G = compute_gram(
+            X,
+            normalization=self.normalization,
+            alpha=self.alpha,
+            beta=self.beta,
+        )
         P = self.solver.solve(G, self.reg)
 
         if not isinstance(P, np.ndarray):
