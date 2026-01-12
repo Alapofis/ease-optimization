@@ -5,6 +5,8 @@ from .cg import CGSolver
 from .pcg import PCGSolver
 from .lsqr import LSQRSolver
 from .amg import AMGSolver
+from .gram import compute_gram
+
 
 __all__ = [
     "EASE",
@@ -14,4 +16,5 @@ __all__ = [
     "PCGSolver",
     "LSQRSolver",
     "AMGSolver",
+    "compute_gram",
 ]
