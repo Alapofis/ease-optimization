@@ -1,0 +1,9 @@
+base_config: experiments/configs/default_m2.yaml
+
+sweep:
+  nystrom_rank: [0, 32, 64, 128]
+
+fixed:
+  epsilon: 1.0e-3
+  block_size: 4
+  nystrom_oversample: 5

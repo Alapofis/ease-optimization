@@ -1,0 +1,18 @@
+{
+  "dataset": "MovieLens 1M",
+  "seed": 52,
+  "min_rating_positive": 4,
+  "min_user_positives": 3,
+  "min_item_positives": 5,
+  "split_mode": "random_by_user",
+  "val_ratio": 0.1,
+  "test_ratio": 0.1,
+  "drop_cold_eval_items": true,
+  "cold_valid_interactions_dropped": 0,
+  "cold_test_interactions_dropped": 0,
+  "n_users": 6035,
+  "n_items": 3125,
+  "train_nnz": 459438,
+  "valid_nnz": 57471,
+  "test_nnz": 57471
+}

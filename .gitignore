@@ -1,5 +1,7 @@
 venv/
 __pycache__/
+.pytest_cache/
+results/
 .ipynb_checkpoints/
 data/raw/
 data/processed/
@@ -7,3 +9,21 @@ data/processed/
 *.npz
 *.pkl
 .env
+
+# Local virtual environments
+.venv/
+venv/
+.venv_ch4/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Large/generated local data
+notebooks/data/raw/

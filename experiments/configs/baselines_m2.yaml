@@ -1,0 +1,8 @@
+base_config: experiments/configs/default_m2.yaml
+
+internal:
+  fixed_epsilon: 1.0e-3
+  selected_epsilon: 1.0e-3
+  selected_block_size: 4
+  selected_nystrom_rank: 32
+  selected_nystrom_oversample: 5
